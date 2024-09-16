@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://sd6k68c25ep1"]
+
+[ext_resource type="Script" path="res://vertex.gd" id="1_dwgkk"]
+[ext_resource type="Texture2D" uid="uid://bja3c63t8g8cw" path="res://icon.svg" id="2_iv10q"]
+
+[node name="Vertex" type="Node2D"]
+script = ExtResource("1_dwgkk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_iv10q")

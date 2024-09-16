@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://tj7t2olbyqtx"]
+
+[ext_resource type="Script" path="res://test_scene.gd" id="1_36a5q"]
+[ext_resource type="PackedScene" uid="uid://sd6k68c25ep1" path="res://vertex.tscn" id="1_x3yrb"]
+
+[node name="TestScene" type="Node2D"]
+script = ExtResource("1_36a5q")
+
+[node name="Vertex" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("1_x3yrb")]
+position = Vector2(139, 167)
+neighbors = [NodePath("../Vertex2"), NodePath("../Vertex8")]
+
+[node name="Vertex2" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("1_x3yrb")]
+position = Vector2(242, 449)
+neighbors = [NodePath("../Vertex"), NodePath("../Vertex3")]
+
+[node name="Vertex3" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("1_x3yrb")]
+position = Vector2(411, 246)
+neighbors = [NodePath("../Vertex2"), NodePath("../Vertex4")]
+
+[node name="Vertex4" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("1_x3yrb")]
+position = Vector2(515, 552)
+neighbors = [NodePath("../Vertex3"), NodePath("../Vertex5")]
+
+[node name="Vertex5" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("1_x3yrb")]
+position = Vector2(625, 105)
+neighbors = [NodePath("../Vertex4"), NodePath("../Vertex6")]
+
+[node name="Vertex6" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("1_x3yrb")]
+position = Vector2(619, 379)
+neighbors = [NodePath("../Vertex5"), NodePath("../Vertex7")]
+
+[node name="Vertex7" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("1_x3yrb")]
+position = Vector2(875, 233)
+neighbors = [NodePath("../Vertex6"), NodePath("../Vertex8")]
+
+[node name="Vertex8" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("1_x3yrb")]
+position = Vector2(837, 527)
+neighbors = [NodePath("../Vertex7"), NodePath("../Vertex")]
